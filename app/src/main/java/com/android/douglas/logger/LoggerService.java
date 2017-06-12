@@ -1,0 +1,27 @@
+package com.android.douglas.logger;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.IBinder;
+import android.support.annotation.Nullable;
+import android.util.Log;
+
+/**
+ * Created by logonrm on 12/06/2017.
+ */
+
+public class LoggerService extends Service {
+    @Nullable
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
+    @Override
+    public void onCreate() {
+        Log.i("Serviço Mensagem","********-Serviço iniciado");
+    }
+    @Override
+    public void onDestroy() {
+        Log.i("Serviço Mensagem","********-Serviço encerrado");
+    }
+}
